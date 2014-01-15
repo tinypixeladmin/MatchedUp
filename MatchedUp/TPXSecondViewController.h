@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TPXSecondViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
 
 @end

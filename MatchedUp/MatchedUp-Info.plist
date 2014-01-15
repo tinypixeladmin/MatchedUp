@@ -26,6 +26,17 @@
 	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>FacebookAppID</key>
+	<string>681230851898610</string>
+	<key>FacebookDisplayName</key>
+	<string>MatchedUp</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>URL schemes</key>
+			<string>fb681230851898610</string>
+		</dict>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

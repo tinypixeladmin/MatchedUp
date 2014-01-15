@@ -14,10 +14,24 @@
 
 @implementation TPXSecondViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    PFQuery *query = [PFQuery queryWithClassName:kTPXPhotoClassKey];
+    [query whereKey:kTPXPhotoUserKey equalTo:[PFUser currentUser]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if([objects count] > 0){
+            PFObject *photo = objects[0];
+            PFFile *pictureFile = photo[kTPXPhotoPictureKey];
+            [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                self.profileImageView.image = [UIImage imageWithData:data];
+            }];
+        }
+        
+        
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
