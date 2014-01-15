@@ -12,10 +12,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     // Override point for customization after application launch.
-    
-    [Parse setApplicationId:@"C6oM5wm8c7cqCShSh5ocHTpQ4a8QzXrJCI7SmCmV"
-                  clientKey:@"dAuklSbhAFivd8NlmP3pVEy5wEAARxUl1DqfG8I8"];
-    
+
+
+    [Parse setApplicationId:@"APP_ID_GOES_HERE"
+                  clientKey:@"CLIENT_KEY_GOES_HERE"];
+
     [PFFacebookUtils initializeFacebook];
 
     return YES;
